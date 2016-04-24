@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Postcard</string>
+    <string name="welcome">Добро пожаловать в приложение Открытка</string>
+    <string name="description">Оно создано для того, чтобы порадовать вас:)Здесь вы можете создать открытку. Есть несколько доступных изображений (чтобы выбрать изображение нажмите на него), простой редактор, ввод теста и отправка по email</string>
+    <string name="edit_image">Редактирование изображения</string>
+    <string name="brightness">яркость</string>
+    <string name="contrast">контраст</string>
+    <string name="filter_1">фильтр 1</string>
+    <string name="filter_2">фильтр 2</string>
+    <string name="next">далее</string>
+    <string name="enter_addressee">Введите тему открытки: </string>
+    <string name="enter_text">Введите текст открытки: </string>
+    <string name="send">Отправить</string>
+    <string name="value">Насыщенность:</string>
+    <string name="name_style">имя стиля</string>
+    <string name="apply">применить</string>
+    <string name="album_name">ОткрыткаИзображения</string>
+</resources>

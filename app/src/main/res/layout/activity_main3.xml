@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Main3Activity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/enter_addressee"
+        android:id="@+id/text3_topic"
+        />
+
+   <EditText
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:layout_below="@id/text3_topic"
+       android:id="@+id/edit_text_email_topic"
+       android:hint="Тема"
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/enter_text"
+        android:id="@+id/text3_pos"
+        android:layout_below="@id/edit_text_email_topic" />
+
+
+
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/email_button_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send"
+        android:textSize="16sp"
+        android:layout_marginRight="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="16dp"
+        android:onClick="send"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text3_pos"
+        android:id="@+id/edit_text_email_text"
+        android:hint="Потому что ты бэтмен!!!"
+        android:gravity="top"
+        android:layout_above="@id/email_button_send"/>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Postcard</string>
+    <string name="welcome">Welcome to the app Postcard</string>
+    <string name="description">Оно создано для того, чтобы порадовать вас:)Здесь вы можете создать открытку.
+        Есть несколько доступных изображений (чтобы выбрать изображение нажмите на него),
+        простой редактор, ввод теста и отправка по email.прежде чем нажать на фильтр выберите значение насыщенности(ползунок).</string>
+    <string name="edit_image">Editing image</string>
+    <string name="brightness">brightness</string>
+    <string name="contrast">contrast</string>
+    <string name="filter_1">filter 1</string>
+    <string name="filter_2">filter 2</string>
+    <string name="next">next</string>
+    <string name="enter_addressee">Enter topic a postcard: </string>
+    <string name="enter_text">Enter postcard text: </string>
+    <string name="send">Send</string>
+    <string name="value">saturation:</string>
+    <string name="name_style">name style</string>
+    <string name="apply">apply</string>
+    <string name="album_name">PostcardImage</string>
+</resources>
