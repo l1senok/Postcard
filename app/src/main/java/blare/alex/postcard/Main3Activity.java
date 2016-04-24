@@ -34,7 +34,7 @@ public class Main3Activity extends AppCompatActivity {
         String str_path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) +
                 "/Postcard" + "/copy_image.png";
 
-        //Передача изображения,текста и темы
+        //>Передача изображения,текста и темы
         File fileIn = new File(str_path);
         Uri uri = Uri.fromFile(fileIn);
 
@@ -44,16 +44,13 @@ public class Main3Activity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_TEXT, strEmailText);
         intent.putExtra(Intent.EXTRA_SUBJECT, strtopic);
         intent.putExtra(Intent.EXTRA_STREAM, uri);
-
-       //Передача изображения,текста и темы
-
+       //<Передача изображения,текста и темы
 
 
-        //Вывод ошибки в случай не удачной передачи
+
         if (intent.resolveActivity(getPackageManager()) != null){
             Toast.makeText(this, "Передача информации для отправки", Toast.LENGTH_SHORT).show();
             startActivity(intent);
-
         }
 
 

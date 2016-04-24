@@ -22,7 +22,7 @@
        android:layout_height="50dp"
        android:layout_below="@id/text3_topic"
        android:id="@+id/edit_text_email_topic"
-       android:hint="Тема"
+       android:hint="@string/topic_hint"
        />
 
     <TextView
@@ -54,7 +54,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/text3_pos"
         android:id="@+id/edit_text_email_text"
-        android:hint="Потому что ты бэтмен!!!"
+        android:hint="@string/text_poctcard_hint"
         android:gravity="top"
         android:layout_above="@id/email_button_send"/>
 

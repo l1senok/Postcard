@@ -1,14 +1,10 @@
 <resources>
     <string name="app_name">Postcard</string>
     <string name="welcome">Welcome to the app Postcard</string>
-    <string name="description">Оно создано для того, чтобы порадовать вас:)Здесь вы можете создать открытку.
-        Есть несколько доступных изображений (чтобы выбрать изображение нажмите на него),
-        простой редактор, ввод теста и отправка по email.прежде чем нажать на фильтр выберите значение насыщенности(ползунок).</string>
+    <string name="description">It was created for to please you :) Here you can create a greeting card.
+        There are a few available images, a simple editor, enter text and send it by email.
+    </string>
     <string name="edit_image">Editing image</string>
-    <string name="brightness">brightness</string>
-    <string name="contrast">contrast</string>
-    <string name="filter_1">filter 1</string>
-    <string name="filter_2">filter 2</string>
     <string name="next">next</string>
     <string name="enter_addressee">Enter topic a postcard: </string>
     <string name="enter_text">Enter postcard text: </string>
@@ -17,4 +13,15 @@
     <string name="name_style">name style</string>
     <string name="apply">apply</string>
     <string name="album_name">PostcardImage</string>
+    <string name="info">information of the application</string>
+    <string name="Information">On the main page, select the image. Five different masks can be selected from the six images.
+        To select, click on the image.
+        In the second box from the top is the saturation slider, set it to the
+        desired value and apply the mask (click on the button from the bottom of the proposed options,
+        if the effect was not sufficiently complete, press again). To cancel all the changes, click on the arrow on the left.
+        To send, click on the right button.
+        In the third window, you can write a subject and message, and send it by email.</string>
+    <string name="back">Back</string>
+    <string name="text_poctcard_hint">Enter text postcard</string>
+    <string name="topic_hint">Enter subject postcard</string>
 </resources>

@@ -30,7 +30,7 @@ implements SeekBar.OnSeekBarChangeListener
     TextView Name_filter, TextValue;
     ImageView ImageResult;
     SeekBar ValSeekbar;
-    int VVV;
+    int valImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,35 +45,25 @@ implements SeekBar.OnSeekBarChangeListener
 
 
         Intent intent = getIntent();
-        int valImage = intent.getIntExtra("valImage_2",0);
+        valImage = intent.getIntExtra("valImage_2", 0);
 
-        if (valImage == 0){
-            ImageResult.setImageResource(R.drawable.back);
-        }
-
-        if (valImage == 1) {
-            ImageResult.setImageResource(R.drawable.image_1);
-
-        }
-        if (valImage == 2) {
-            ImageResult.setImageResource(R.drawable.image_2);
-
-        }
-        if (valImage == 3) {
-            ImageResult.setImageResource(R.drawable.image_3);}
+        if (valImage == 0) {ImageResult.setImageResource(R.drawable.back);}
+        if (valImage == 1) {ImageResult.setImageResource(R.drawable.image_1);}
+        if (valImage == 2) {ImageResult.setImageResource(R.drawable.image_2);}
+        if (valImage == 3) {ImageResult.setImageResource(R.drawable.image_3);}
+        if (valImage == 4) {ImageResult.setImageResource(R.drawable.image_4);}
+        if (valImage == 5) {ImageResult.setImageResource(R.drawable.image_5);}
+        if (valImage == 6) {ImageResult.setImageResource(R.drawable.image_6);}
 
         //SeekBar
-
         final SeekBar seekbar = (SeekBar) findViewById(R.id.seekBar);
         seekbar.setOnSeekBarChangeListener(this);
-
+        seekbar.setProgress(100);
         TextValue = (TextView) findViewById(R.id.val_saturation);
-        TextValue.setText("0");
-
-
-        VVV=valImage;
+        TextValue.setText("100");
 
     }
+
         //>Методы для ползунка(переопределение)
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser)
@@ -93,19 +83,6 @@ implements SeekBar.OnSeekBarChangeListener
         }
         //<Методы для ползунка
 
-/*
-
-    // Проверяет, доступно ли external storage для чтения и записи
-    public boolean isExternalStorageWritable()
-    {
-        String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state)) {
-            return true;
-        }
-        return false;
-    }
-*/
-
 
     //>Методы для изменения изображения
     public void filter_1(View view) {
@@ -115,28 +92,28 @@ implements SeekBar.OnSeekBarChangeListener
     }
 
     public void filter_2(View view) {
-        //
+        //Pony
         Bitmap bm2 = BitmapFactory.decodeResource(getResources(), R.drawable.fil2);
-        filters("filter2",bm2);
+        filters("Pony",bm2);
     }
 
     public void filter_3(View view) {
-        //
+        //New Year
         Bitmap bm2 = BitmapFactory.decodeResource(getResources(), R.drawable.fil3);
-        filters("filter3",bm2);
+        filters("New Year",bm2);
 
     }
 
     public void filter_4(View view) {
-        //
+        //Bokeh
         Bitmap bm2 = BitmapFactory.decodeResource(getResources(), R.drawable.fil4);
-        filters("filter4",bm2);
+        filters("Bokeh",bm2);
     }
 
     public void filter_5(View view) {
-        //
+        //Blood
         Bitmap bm2 = BitmapFactory.decodeResource(getResources(), R.drawable.fil5);
-        filters("filter5",bm2);
+        filters("Blood",bm2);
     }
 
     private void filters(String namefil,Bitmap bm2){
@@ -147,9 +124,8 @@ implements SeekBar.OnSeekBarChangeListener
         Name_filter.setText(namefil);
 
         int w=bm1.getWidth();
-        int h=bm2.getHeight();
+        int h=bm1.getHeight();
 
-        //Bitmap.Config config = bm1.getConfig();
         Bitmap.Config config = Bitmap.Config.ARGB_8888;
 
         newBitmap = Bitmap.createBitmap(w, h, config);
@@ -159,27 +135,22 @@ implements SeekBar.OnSeekBarChangeListener
 
         Paint paint = new Paint();
         int val = Integer.valueOf(ValSeekbar.getProgress());
-        paint.setAlpha(val);
+        paint.setAlpha(val+125);
         newCanvas.drawBitmap(bm2, 0, 0, paint);
 
         ImageResult.setImageBitmap(newBitmap);
     }
     //<Методы для изменения изображения
 
+    //Отмена всех изменений
+    public void back(View view) {
 
-    //Сохранение временных изменений
-    public void apply_changes(View view) {
-
-        if (VVV == 1) {
-            ImageResult.setImageResource(R.drawable.image_1);
-
-        }
-        if (VVV == 2) {
-            ImageResult.setImageResource(R.drawable.image_2);
-
-        }
-        if (VVV == 3) {
-            ImageResult.setImageResource(R.drawable.image_3);}
+        if (valImage == 1) {ImageResult.setImageResource(R.drawable.image_1);}
+        if (valImage == 2) {ImageResult.setImageResource(R.drawable.image_2);}
+        if (valImage == 3) {ImageResult.setImageResource(R.drawable.image_3);}
+        if (valImage == 4) {ImageResult.setImageResource(R.drawable.image_4);}
+        if (valImage == 5) {ImageResult.setImageResource(R.drawable.image_5);}
+        if (valImage == 6) {ImageResult.setImageResource(R.drawable.image_6);}
     }
 
     //Сохранение изображения в галлерею и переход для отправки по почте

@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="blare.alex.postcard.Main2Activity">
+    tools:context="blare.alex.postcard.Main2Activity"
+    android:background="#000000">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,16 +48,14 @@
         android:layout_width="match_parent"
         android:id="@+id/seekBar"
         android:layout_weight="0.7"
-        android:background="#000000">
-    </SeekBar>
-
+        android:background="#000000" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="8"
             android:id="@+id/edit_image"
-            android:src="@drawable/shablon"
+            android:src="@drawable/image_1"
             android:background="#000000"
             android:layout_gravity="center"/>
 
@@ -66,14 +65,15 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:layout_weight="1"
-        android:background="#000000">
+        android:background="#000000"
+        android:padding="6dp">
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.5"
+            android:layout_weight="1"
             android:onClick="back"
-            android:background="@drawable/back"/>
+            android:background="@drawable/back" />
 
         <TextView
             android:layout_width="0dp"
@@ -89,7 +89,7 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:background="@drawable/right_arrow"
             android:onClick="go_next"
             />
@@ -98,7 +98,7 @@
     </LinearLayout>
 
     <HorizontalScrollView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_alignParentBottom="true"
         android:id="@+id/horizontal_view_main"
@@ -106,48 +106,55 @@
         android:layout_weight="2">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:background="#000000">
 
-            <Button
-                android:layout_width="0dp"
+            <ImageButton
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:text="кнопка 1"
                 android:id="@+id/but1"
                 android:onClick="filter_1"
-                android:layout_weight="1"
-
+                android:src="@drawable/template_1"
+                android:scaleType="fitCenter"
+                android:background="#000000"
                 />
-            <Button
-                android:layout_width="0dp"
+            <ImageButton
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:text="кнопка 2"
                 android:id="@+id/but2"
                 android:onClick="filter_2"
-                android:layout_weight="1"/>
-            <Button
-                android:layout_width="0dp"
+                android:src="@drawable/template_2"
+                android:scaleType="fitCenter"
+                android:background="#000000"/>
+
+            <ImageButton
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:text="кнопка 3"
                 android:id="@+id/but3"
                 android:onClick="filter_3"
-                android:layout_weight="1"/>
-            <Button
-                android:layout_width="0dp"
+                android:src="@drawable/template_3"
+                android:scaleType="fitCenter"
+                android:background="#000000"/>
+
+            <ImageButton
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:text="кнопка 4"
                 android:id="@+id/but4"
                 android:onClick="filter_4"
-                android:layout_weight="1"/>
-            <Button
-                android:layout_width="0dp"
+                android:src="@drawable/template_4"
+                android:scaleType="fitCenter"
+                android:background="#000000"/>
+
+            <ImageButton
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:text="кнопка 5"
                 android:id="@+id/but5"
                 android:onClick="filter_5"
-                android:layout_weight="1"/>
+                android:src="@drawable/template_5"
+                android:scaleType="fitCenter"
+                android:background="#000000"/>
 
         </LinearLayout>
 
